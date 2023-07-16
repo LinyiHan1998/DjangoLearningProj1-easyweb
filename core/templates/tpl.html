@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>learning django template</h1>
+<div>{{n1}}</div>
+<div>{{n2.0}}</div>
+<div>{{n2.1}}</div>
+<div>
+    {% for item in n2 %}
+        <span>{{ item }}</span>
+    {% endfor %}
+</div>
+<hr/>
+{{ n3 }}
+{{ n3.name }}
+{{ n3.salary }}
+{{ n3.role }}
+<ul>
+    {% for k,v in n3.items %}
+        <li>{{ k }} = {{ v }}</li>
+    {% endfor %}
+</ul>
+{% for item in n4 %}
+    {{ item.role}} = {{ item.name }}
+    <br>
+{% endfor %}
+<hr>
+{% if n1 == 'John' %}
+    <h1>aaaaa</h1>
+{% else %}
+    <h1>bbbbb</h1>
+{% endif %}
+</body>
+</html>

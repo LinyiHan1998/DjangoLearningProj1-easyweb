@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INFO List</title>
+</head>
+<body>
+<h1> Info List</h1>
+<a href="/info/add"> add new user</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>password</th>
+        <th>age</th>
+        <th>method</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in data_list  %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.password }}</td>
+        <td>{{ item.age }}</td>
+        <td>
+            <a href="/info/delete?nid={{ item.id }}">delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
